@@ -1,16 +1,17 @@
 module.exports = {
     "env": {
         "es6": true,
-        "node": true
+        "node": true,
+        "jest": true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
-        "ecmaVersion": 2016
+        "ecmaVersion": 8
     },
     "rules": {
         "indent": [
             "error",
-            "tab"
+            2
         ],
         "linebreak-style": [
             "error",
@@ -37,6 +38,6 @@ module.exports = {
           "test": true,
           "expect": true,
           "describe": true
-      }
+        }
     }
 };

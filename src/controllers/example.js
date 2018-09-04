@@ -1,4 +1,4 @@
-const exampleRouter = require('express').Router();
+const exampleRouter = require('express').Router()
 
 exampleRouter.get('/', (req, res) => {
   res.status(200).send('OK')
