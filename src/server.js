@@ -11,7 +11,9 @@ const app = require('express')()
 // MIDDLEWARE
 app.use(cors())
 app.use(bodyParser.json())
-app.use(morgan('common'))
+if (process.env.NODE_ENV !== 'test') {
+  app.use(morgan('common'))
+}
 app.use(helmet())
 app.use(compression())
 
