@@ -1,5 +1,10 @@
-if (process.env.NODE_ENV !== 'production') {
+const swaggerDoc = require('../swagger.json')
+
+const isProduction = process.env.NODE_ENV === 'production'
+if (!isProduction) {
   require('dotenv').config()
+} else {
+  swaggerDoc.basePath = 'https://cd-pipeline-skeleton.herokuapp.com'
 }
 
 let port = process.env.PORT
@@ -9,5 +14,6 @@ if (process.env.NODE_ENV === 'test') {
 }
 
 module.exports = {
-  port
+  port,
+  swaggerDoc
 }

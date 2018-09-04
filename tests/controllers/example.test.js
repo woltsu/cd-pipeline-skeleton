@@ -1,13 +1,15 @@
 const supertest = require('supertest')
-const { app, server } = require('../../src/server')
+const { app, server, apiUrl } = require('../../src/server')
 const api = supertest(app)
 
+const testUrl = `${apiUrl}/example`
+
 describe('example controller', () => {
-  describe('/', () => {
+  describe(testUrl, () => {
     test('GET', async () => {
-      const response = await api.get('/')
+      const response = await api.get(testUrl)
       expect(response.status).toBe(200)
-      expect(response.text).toBe('Hello world!')
+      expect(response.body.message).toBe('Hello world!')
     })
   })
 })

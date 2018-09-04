@@ -5,6 +5,7 @@ const cors = require('cors')
 const morgan = require('morgan')
 const helmet = require('helmet')
 const compression = require('compression')
+const swagger = require('swagger-ui-express')
 const config = require('./config')
 const app = require('express')()
 
@@ -18,8 +19,10 @@ app.use(helmet())
 app.use(compression())
 
 // CONTROLLERS
+const apiUrl = '/api/v1'
 const exampleController = require('./controllers/example')
-app.use('/', exampleController)
+app.use(`${apiUrl}/example`, exampleController)
+app.use('/', swagger.serve, swagger.setup(config.swaggerDoc))
 
 // CREATE SERVER
 const server = http.createServer(app)
@@ -29,5 +32,6 @@ server.listen(config.port, () => {
 
 module.exports = {
   app,
-  server
+  server,
+  apiUrl
 }
