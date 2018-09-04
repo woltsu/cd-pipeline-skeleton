@@ -9,7 +9,7 @@ describe('example controller', () => {
     test('GET', async () => {
       const response = await api.get(testUrl)
       expect(response.status).toBe(200)
-      expect(response.body.message).toBe('Hello world!')
+      expect(response.body.message).toBe('Hello worlddd!')
     })
   })
 })
