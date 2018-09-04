@@ -6,7 +6,6 @@ install:
 script:
   - npm run test
   - npm run lint
-  - codecov
 deploy:
   provider: heroku
   api_key:
