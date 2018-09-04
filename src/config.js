@@ -5,6 +5,7 @@ if (!isProduction) {
   require('dotenv').config()
 } else {
   swaggerDoc.host = 'cd-pipeline-skeleton.herokuapp.com'
+  swaggerDoc.schemes = [ 'https' ]
 }
 
 let port = process.env.PORT
