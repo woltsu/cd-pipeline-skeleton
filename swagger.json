@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "version": "1.0.0",
-    "title": "CD-PIPELINE_SKELETON",
+    "title": "CD-PIPELINE-SKELETON",
     "description": "Skeleton for a cd node project"
   },
   "host": "localhost:8080",
