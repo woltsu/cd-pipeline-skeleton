@@ -1,4 +1,4 @@
-# cd-pipeline-skeleton
+# node-cd-pipeline-skeleton
 [![Build Status](https://travis-ci.org/woltsu/node-cd-pipeline-skeleton.svg?branch=master)](https://travis-ci.org/woltsu/node-cd-pipeline-skeleton)
 [![codecov](https://codecov.io/gh/woltsu/cd-pipeline-skeleton/branch/master/graph/badge.svg)](https://codecov.io/gh/woltsu/cd-pipeline-skeleton)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1102648741bae2dc0e63/maintainability)](https://codeclimate.com/github/woltsu/cd-pipeline-skeleton/maintainability)
