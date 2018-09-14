@@ -1,9 +1,6 @@
 language: node_js
 node_js:
   - '8'
-branches:
-  only:
-  - master
 script:
   - npm run test
   - npm run lint
@@ -13,3 +10,5 @@ deploy:
   api_key:
     secure: PovnNvrAPXQnyttra9mOpc8bmaF63Vhe+roIF29hxnHEDtlzTcwjyjb/OIkBe7Ri4J5c5mZ+GrWz9aQ9SLKNxVTdkiI4iru5bvb5GWlbuUUOdYRkYidNZqQUZRGylw5Fubm9UgXBX7r8nGXBpLrXgM9Bz6OxM/JxVhNPixOpAtQwi0LZy079LUXYFqFZ0uXi2sFwM8qX+IETwNZxQUqvCO18KdnDahlilWYCfqj7EatHtNAlxpAQm02+Bwc0MuY62MCnfL5PLMrn77eeQuiUL8Ws9vMvY7vFCmb/4z6On+T5M5hta3JDWkuqOjTUhL3zk3MsowYsmm56mPNM82LAjlq9F6NaaKBwRpm7ZzjOm4UfgAQXilIQSffpgEA3rtLnd3upKddd9ILFm14h6u6WnuDazMq/l6JX36TKrJO1ytLhfkHFbe/fYzaGdNKeghb7uctOAEO66vgzTiPi4KNylFzUeHLFRzDLDxAsW+5oiaiM7ttA2bHz3wD3r5oibnsjpM9tEw5SIm1CM/v2OaKEHUZw6THsJGjy9Y+V9wyVLrwnmXOkTKCTIB0TuPxWZbCt7V7lKHzLYk0e59JKLFpERMIK72mhEUvmDnb1JeDpZw0D2ywTMDHJXvCO2LhHbWszgNd2exRrXEDYJmpzLoKFwe5qFp978XOpWWDNxRuO+vo=
   app: cd-pipeline-skeleton
+  on:
+    branch: master
